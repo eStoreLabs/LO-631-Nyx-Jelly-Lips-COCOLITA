@@ -224,7 +224,7 @@ $transition: all 200ms ease-in-out;
       text-transform: uppercase;
       font-family: $text-secondary;
       font-weight: $fw-bold;
-      font-size: 40px;
+      font-size: 30px;
       text-align: center;
     }
 
@@ -336,12 +336,30 @@ $transition: all 200ms ease-in-out;
       text-transform: uppercase;
       font-family: $text-secondary;
       font-weight: $fw-bold;
-      font-size: 40px;
+      font-size: 30px;
       text-align: center;
+    }
+
+    &__right-items {
+      position: relative;
+    }
+
+    &__deco-img {
+      position: absolute;
+      top: 0;
+      left: -80px;
+      max-width: 105px;
+
+      &--2 {
+        left: auto;
+        top: 33px;
+        right: -80px;
+      }
     }
 
     &__right-item {
       position: relative;
+      z-index: 3;
     }
 
     &__icons-list {
@@ -349,7 +367,6 @@ $transition: all 200ms ease-in-out;
       justify-items: center;
       align-items: center;
       padding-top: 10px;
-      padding-left: 42px;
       gap: 15px;
       column-gap: 65px;
     }
@@ -393,8 +410,43 @@ $transition: all 200ms ease-in-out;
 
     &__inner {
       display: flex;
-      gap: 10px;
+      gap: 30px;
     }
+
+    &__inner-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    &__inner-item-img {
+      max-width: 120px;
+      margin-top: -10px;
+      margin-left: 14px;
+    }
+
+    &__inner-item-title {
+      max-width: 100px;
+      padding: 5px 10px;
+      font-family: $text-secondary;
+      font-weight: $fw-bold;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: center;
+
+      &--1 {
+        background: #ffb5cb;
+        color: #980231;
+      }
+
+      &--2 {
+        background: #f5569e;
+        color: #fff;
+      }
+    }
+
 
     &__left {
       display: flex;
@@ -413,6 +465,7 @@ $transition: all 200ms ease-in-out;
       text-wrap: balance;
       margin-bottom: $px-XXL;
       justify-content: center;
+      margin-top: 20px;
 
       p {
         line-height: 0.5;
@@ -485,12 +538,31 @@ $transition: all 200ms ease-in-out;
         }
       }
     }
+
+    &__right {
+      position: relative;
+    }
+
+    &__duet-deco {
+      position: absolute;
+      display: none;
+
+      &--1 {
+        width: 128px;
+        top: -48px;
+        left: 50px;
+      }
+
+      &--2 {
+        width: 90px;
+        top: 25px;
+        right: 28px;
+      }
+    }
   }
 
   .es-formula {
-
-    padding-top: 50px;
-
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -584,12 +656,15 @@ $transition: all 200ms ease-in-out;
       }
 
       &-text {
-        margin-bottom: 100px;
         text-transform: uppercase;
         font-family: $text-secondary;
         font-weight: $fw-extra-bold;
-        font-size: 35px;
+        font-size: 30px;
         text-align: center;
+
+        &--title {
+          margin-bottom: 90px;
+        }
 
         &--border {
           font-family: $text-main;
@@ -625,7 +700,7 @@ $transition: all 200ms ease-in-out;
       max-width: 150px;
       position: absolute;
       top: 35px;
-      right: -50px;
+      right: -2px;
     }
   }
 
@@ -637,7 +712,7 @@ $transition: all 200ms ease-in-out;
       text-transform: uppercase;
       font-family: $text-secondary;
       font-weight: $fw-bold;
-      font-size: 40px;
+      font-size: 30px;
       text-align: center;
       padding-top: 50px;
       padding-bottom: 40px;
@@ -1093,11 +1168,11 @@ $transition: all 200ms ease-in-out;
       }
 
       &--2 {
-        max-height: 250px;
+        max-height: 320px;
       }
 
       &--3 {
-        max-height: 180px;
+        max-height: 240px;
       }
     }
 
@@ -1109,22 +1184,24 @@ $transition: all 200ms ease-in-out;
     }
 
     &__name {
-      font-size: 18px;
-      font-weight: $fw-black;
+      font-family: $text-secondary;
+      font-weight: $fw-bold;
+      font-size: 24px;
       text-transform: uppercase;
 
       @container cross (min-width: 782px) {
-        height: 65px;
+        height: 31px;
       }
     }
 
     &__desc {
+      font-family: $text-secondary;
       font-size: $fs-base;
       font-weight: $fw-regular;
       text-wrap: balance;
 
       @container cross (min-width: 782px) {
-        height: 180px;
+        height: 100px;
       }
     }
 
@@ -1147,6 +1224,10 @@ $transition: all 200ms ease-in-out;
         color: $color-black;
       }
     }
+
+    &__title {
+      font-size: 30px;
+    }
   }
 
   @media screen and (min-width: 450px) {
@@ -1159,12 +1240,24 @@ $transition: all 200ms ease-in-out;
 
 
   @media screen and (min-width: 768px) {
+
+    .es-colors__title,
+    .es-features__right-title,
+    .es-cross__title {
+      font-size: 40px;
+    }
+
     .es-features {
       flex-direction: row;
       justify-content: space-between;
 
+      &__icons-list {
+        padding-left: 42px;
+      }
+
       &__img {
         max-width: 180px;
+        z-index: 6;
       }
 
       &__left {
@@ -1185,11 +1278,26 @@ $transition: all 200ms ease-in-out;
       &__flexCtn {
         padding-bottom: 0;
       }
+
+      &__duet-deco {
+        display: block;
+      }
+
+
+      &__inner {
+        padding-left: 80px;
+      }
     }
 
     .es-colors {
       &__title p {
         font-size: 55px;
+      }
+    }
+
+    .es-formula {
+      &__right {
+        width: 69%;
       }
     }
   }
@@ -1234,8 +1342,8 @@ $transition: all 200ms ease-in-out;
       &__middle {
         position: absolute;
         z-index: 3;
-        left: 50%;
-        top: 50%;
+        left: 49%;
+        top: 41%;
         transform: translate(-50%, -50%);
       }
 
@@ -1282,6 +1390,11 @@ $transition: all 200ms ease-in-out;
 
       &__right {
         padding-left: 50px;
+      }
+
+      &__inner-img {
+        margin-top: -70px;
+        width: 110%;
       }
 
     }
