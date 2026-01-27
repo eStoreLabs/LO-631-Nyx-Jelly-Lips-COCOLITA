@@ -1146,7 +1146,7 @@ $transition: all 200ms ease-in-out;
     }
 
     &__single {
-      max-width: 275px;
+      max-width: 280px;
       display: flex;
       flex-direction: column;
       gap: $px-XL;
@@ -1195,10 +1195,11 @@ $transition: all 200ms ease-in-out;
     }
 
     &__desc {
-      font-family: $text-secondary;
-      font-size: $fs-base;
+      font-family: $text-main;
+      font-size: 14px;
       font-weight: $fw-regular;
       text-wrap: balance;
+      line-height: 1.4;
 
       @container cross (min-width: 782px) {
         height: 100px;
