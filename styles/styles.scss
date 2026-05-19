@@ -24,7 +24,7 @@ $px-XL: 32px;
 $px-XXL: 48px;
 
 $color-main: #ffffff;
-$color-bg: #F732CD;
+$color-bg: #f732cd;
 $color-accent: #00c380;
 $color-accent-2: #eb2524;
 $color-accent-3: #fdcf49;
@@ -61,7 +61,7 @@ $transition: all 200ms ease-in-out;
   line-height: 1.2;
   color: $color-main;
   background-color: $color-bg;
-  max-width: 990px;
+  max-width: 1300px;
   margin: auto;
   overflow: hidden;
 
@@ -166,8 +166,6 @@ $transition: all 200ms ease-in-out;
         font-weight: $fw-bold;
       }
 
-
-
       &-flexItem {
         padding-top: 30px;
         text-align: center;
@@ -246,7 +244,6 @@ $transition: all 200ms ease-in-out;
       flex-direction: row;
       position: relative;
 
-
       &__left {
         width: 38%;
         z-index: 2;
@@ -300,7 +297,6 @@ $transition: all 200ms ease-in-out;
       max-width: 200px;
       max-height: 350px;
     }
-
 
     &__left {
       display: flex;
@@ -418,7 +414,6 @@ $transition: all 200ms ease-in-out;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
     }
 
     &__inner-item-img {
@@ -446,7 +441,6 @@ $transition: all 200ms ease-in-out;
         color: #fff;
       }
     }
-
 
     &__left {
       display: flex;
@@ -792,7 +786,7 @@ $transition: all 200ms ease-in-out;
       display: block;
     }
 
-    .swiper-wrapper.swiper-no-swiping>.swiper-slide {
+    .swiper-wrapper.swiper-no-swiping > .swiper-slide {
       width: 100% !important;
       margin-bottom: 2rem;
     }
@@ -972,7 +966,6 @@ $transition: all 200ms ease-in-out;
     }
 
     &__single--2 {
-
       position: relative;
 
       &__product {
@@ -1020,6 +1013,10 @@ $transition: all 200ms ease-in-out;
           line-height: 1;
           color: #fff;
 
+          @media (min-width: 1400px) {
+            font-size: 14px;
+          }
+
           &--black {
             color: #000;
           }
@@ -1027,11 +1024,9 @@ $transition: all 200ms ease-in-out;
           &--2 {
             color: #fff;
           }
-
         }
       }
     }
-
   }
 
   .es-video {
@@ -1239,9 +1234,7 @@ $transition: all 200ms ease-in-out;
     }
   }
 
-
   @media screen and (min-width: 768px) {
-
     .es-colors__title,
     .es-features__right-title,
     .es-cross__title {
@@ -1284,7 +1277,6 @@ $transition: all 200ms ease-in-out;
         display: block;
       }
 
-
       &__inner {
         padding-left: 80px;
       }
@@ -1305,13 +1297,11 @@ $transition: all 200ms ease-in-out;
 
   @media screen and (min-width: 998px) {
     .es-kv {
-
       &__middle-img {
         max-width: 300px;
       }
 
       &__right {
-
         top: 8%;
       }
 
@@ -1334,11 +1324,33 @@ $transition: all 200ms ease-in-out;
       }
     }
 
+    .es-colors {
+      &__container--top {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        .es-colors__single-img {
+          max-width: unset;
+          width: 100%;
+          height: 100%;
+        }
+        .es-colors__single--2 {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__container--bottom {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        .es-colors__single-img--2 {
+          max-width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
     .es-formula {
       position: relative;
       justify-content: space-between;
-
-
 
       &__middle {
         position: absolute;
@@ -1356,7 +1368,6 @@ $transition: all 200ms ease-in-out;
         &--title {
           padding-top: 50px;
           font-size: 50px;
-
         }
       }
 
@@ -1388,6 +1399,7 @@ $transition: all 200ms ease-in-out;
 
     .es-steps {
       flex-direction: row;
+      justify-content: space-evenly;
 
       &__right {
         padding-left: 50px;
@@ -1397,8 +1409,6 @@ $transition: all 200ms ease-in-out;
         margin-top: -70px;
         width: 110%;
       }
-
     }
-
   }
 }
